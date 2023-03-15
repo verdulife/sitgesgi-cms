@@ -10,13 +10,13 @@ public_folder: "uploads"
 collections:
   - name: "pubs"
     label: "Publicaciones"
-    folder: "src/pages/blog"
+    folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPost.astro"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
-      - {label: "Featured Image", name: "heroImage", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Featured Image", name: "heroImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
