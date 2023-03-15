@@ -1,0 +1,51 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+@custom-selector :--media img, video;
+
+/* ⚡ startcss reset ⚡ */
+
+:--media {
+	object-fit: cover;
+	object-position: center;
+	user-select: none;
+	-webkit-user-drag: none;
+	overflow: hidden;
+
+	&:contain {
+		object-fit: contain;
+	}
+}
+
+picture {
+	overflow: hidden;
+
+	&[icon],
+	&[avatar] {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& > :--media,
+		& > svg {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&[avatar] {
+		border: 2px solid var(--base-300);
+		border-radius: 50%;
+
+		@media (--dark) {
+			border-color: var(--base-700);
+		}
+	}
+}

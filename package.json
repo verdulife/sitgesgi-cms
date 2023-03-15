@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.18",
     "@astrojs/mdx": "^0.17.2",
     "@astrojs/rss": "^2.1.1",
-    "@astrojs/sitemap": "^1.1.0"
+    "@astrojs/sitemap": "^1.1.0",
+    "astro": "^2.0.18",
+    "postcss-each": "^1.1.0",
+    "postcss-preset-env": "^8.0.1"
   }
 }

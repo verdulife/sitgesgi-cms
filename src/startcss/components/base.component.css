@@ -1,0 +1,100 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* 🎨 dynamic properties 🎨 */
+
+body {
+	--background: var(--base-100);
+	--color: var(--base-900);
+	--border-radius: 0.75em;
+
+	@media (--sm) {
+		--border-radius: 0.5em;
+	}
+}
+
+::selection {
+	--background-color: var(--base-800);
+	--color: var(--base-100);
+}
+
+/* ⚡ startcss reset ⚡ */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-shadow: none;
+	image-rendering: crisp-edges;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	-webkit-tap-highlight-color: transparent;
+
+	&:not(progress) {
+		border: none;
+	}
+
+	@media (--reduced-motion) {
+		transition: none !important;
+		animation: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+html,
+body {
+	height: 100%;
+	height: 100svh;
+	overflow-x: hidden;
+}
+
+html {
+	min-height: calc(100% + var(--safe-top));
+	min-height: calc(100svh + var(--safe-top));
+	background-color: #000;
+}
+
+body {
+	background: var(--background);
+	color: var(--color);
+	font-family: var(--font-base);
+	font-size: 100%;
+	vertical-align: baseline;
+
+	&[rounded] {
+		border-radius: var(--border-radius);
+	}
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+select {
+	appearance: none;
+}
+
+textarea {
+	resize: none;
+}
+
+::selection {
+	background-color: var(--background-color);
+	color: var(--color);
+}

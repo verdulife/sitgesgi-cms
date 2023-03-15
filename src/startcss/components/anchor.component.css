@@ -1,0 +1,38 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* 🎨 dynamic properties 🎨 */
+
+a {
+	text-decoration: none;
+	color: var(--base-800);
+}
+
+a[rel] {
+	--text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		--text-decoration: none;
+	}
+
+	@media (--touch) {
+		--text-decoration: underline;
+	}
+}
+
+/* ⚡ startcss reset ⚡ */
+
+a[rel] {
+	text-decoration: var(--text-decoration);
+
+	& * {
+		text-decoration: none !important;
+	}
+}

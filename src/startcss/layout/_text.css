@@ -1,0 +1,109 @@
+.tleft {
+	text-align: left;
+}
+.tcenter {
+	text-align: center;
+}
+.tright {
+	text-align: right;
+}
+.tjustify {
+	text-align: justify;
+}
+
+.ltr {
+	direction: ltr;
+}
+.rtl {
+	direction: rtl;
+}
+
+.vertical-lr {
+	writing-mode: vertical-lr;
+	text-orientation: upright;
+}
+.vertical-rl {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+.clamp {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.clamp2 {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.clamp3 {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.clamp4 {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@each $media in sm, md, lg, xl, 2xl {
+	@media (--$(media)) {
+		.tleft\@$(media) {
+			text-align: left;
+		}
+		.tcenter\@$(media) {
+			text-align: center;
+		}
+		.tright\@$(media) {
+			text-align: right;
+		}
+		.tjustify\@$(media) {
+			text-align: justify;
+		}
+
+		.ltr\@$(media) {
+			direction: ltr;
+		}
+		.rtl\@$(media) {
+			direction: rtl;
+		}
+
+		.vertical-lr\@$(media) {
+			writing-mode: vertical-lr;
+			text-orientation: upright;
+		}
+		.vertical-rl\@$(media) {
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
+
+		.clamp\@$(media) {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.clamp2\@$(media) {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+		.clamp3\@$(media) {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+		.clamp4\@$(media) {
+			display: -webkit-box;
+			-webkit-line-clamp: 4;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+}

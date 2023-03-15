@@ -1,0 +1,29 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* 🎨 custom properties 🎨 */
+
+@import './custom/breakpoint.custom.css';
+@import './custom/colors.custom.css';
+@import './custom/fontsize.custom.css';
+@import './custom/fontfamily.custom.css';
+@import './custom/spacing.custom.css';
+
+/* ⚡ startcss reset ⚡ */
+
+@import './components/base.component.css';
+@import './components/scrollbar.component.css';
+@import './components/anchor.component.css';
+@import './components/button.component.css';
+@import './components/text.component.css';
+@import './components/heading.component.css';
+@import './components/input.component.css';
+@import './components/media.component.css';
+
+@import './layout/layout.css';

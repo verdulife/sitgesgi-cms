@@ -1,0 +1,185 @@
+.wauto {
+	width: auto;
+}
+.hauto {
+	height: auto;
+}
+
+.w1\/4 {
+	width: calc(100% / 4); /* 25 */
+}
+.w2\/4 {
+	width: calc(200% / 4); /* 50 */
+}
+.w3\/4 {
+	width: calc(300% / 4); /* 75 */
+}
+.w1\/3 {
+	width: calc(100% / 3); /* 33 */
+}
+.w2\/3 {
+	width: calc(200% / 3); /* 66 */
+}
+.w1\/2 {
+	width: calc(100% / 2); /* 50 */
+}
+
+.h1\/4 {
+	height: calc(100% / 4); /* 25 */
+}
+.h2\/4 {
+	height: calc(200% / 4); /* 50 */
+}
+.h3\/4 {
+	height: calc(300% / 4); /* 75 */
+}
+.h1\/3 {
+	height: calc(100% / 3); /* 33 */
+}
+.h2\/3 {
+	height: calc(200% / 3); /* 66 */
+}
+.h1\/2 {
+	height: calc(100% / 2); /* 50 */
+}
+
+.wfull {
+	width: 100%;
+}
+.hfull {
+	height: 100%;
+}
+.full {
+	width: 100%;
+	height: 100%;
+}
+
+.wscreen {
+	width: 100vw;
+}
+.hscreen {
+	height: 100vh;
+}
+.screen {
+	width: 100vw;
+	height: 100vh;
+}
+
+.wmin {
+	width: min-content;
+}
+.wmax {
+	width: max-content;
+}
+.wfit {
+	width: fit-content;
+}
+
+.hmin {
+	height: min-content;
+}
+.hmax {
+	height: max-content;
+}
+.hfit {
+	height: fit-content;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+@each $media in sm, md, lg, xl, 2xl {
+	@media (--$(media)) {
+		.wauto\@$(media) {
+			width: auto;
+		}
+		.hauto\@$(media) {
+			height: auto;
+		}
+
+		.w1\/4\@$(media) {
+			width: calc(100% / 4); /* 25 */
+		}
+		.w2\/4\@$(media) {
+			width: calc(200% / 4); /* 50 */
+		}
+		.w3\/4\@$(media) {
+			width: calc(300% / 4); /* 75 */
+		}
+		.w1\/3\@$(media) {
+			width: calc(100% / 3); /* 33 */
+		}
+		.w2\/3\@$(media) {
+			width: calc(200% / 3); /* 66 */
+		}
+		.w1\/2\@$(media) {
+			width: calc(100% / 2); /* 50 */
+		}
+
+		.h1\/4\@$(media) {
+			height: calc(100% / 4); /* 25 */
+		}
+		.h2\/4\@$(media) {
+			height: calc(200% / 4); /* 50 */
+		}
+		.h3\/4\@$(media) {
+			height: calc(300% / 4); /* 75 */
+		}
+		.h1\/3\@$(media) {
+			height: calc(100% / 3); /* 33 */
+		}
+		.h2\/3\@$(media) {
+			height: calc(200% / 3); /* 66 */
+		}
+		.h1\/2\@$(media) {
+			height: calc(100% / 2); /* 50 */
+		}
+
+		.wfull\@$(media) {
+			width: 100%;
+		}
+		.hfull\@$(media) {
+			height: 100%;
+		}
+		.full\@$(media) {
+			width: 100%;
+			height: 100%;
+		}
+
+		.wscreen\@$(media) {
+			width: 100vw;
+		}
+		.hscreen\@$(media) {
+			height: 100vh;
+		}
+		.screen\@$(media) {
+			width: 100vw;
+			height: 100vh;
+		}
+
+		.wmin\@$(media) {
+			width: min-content;
+		}
+		.wmax\@$(media) {
+			width: max-content;
+		}
+		.wfit\@$(media) {
+			width: fit-content;
+		}
+
+		.hmin\@$(media) {
+			height: min-content;
+		}
+		.hmax\@$(media) {
+			height: max-content;
+		}
+		.hfit\@$(media) {
+			height: fit-content;
+		}
+
+		.grow\@$(media) {
+			flex-grow: 1;
+		}
+	}
+}

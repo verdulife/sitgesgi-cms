@@ -1,0 +1,43 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* 🎨 dynamic properties 🎨 */
+
+.scrollbar {
+	--width: 20px;
+	--background-color: var(--base-900);
+
+	@media (--dark) {
+		--background-color: var(--base);
+	}
+
+	@media (--touch) {
+		--width: 0;
+	}
+}
+
+/* ⚡ startcss reset ⚡ */
+
+.scrollbar {
+	&::-webkit-scrollbar {
+		width: var(--width);
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--background-color);
+		background-clip: padding-box;
+		border: 6px solid transparent;
+		border-radius: var(--width);
+	}
+}

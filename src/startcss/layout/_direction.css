@@ -1,0 +1,71 @@
+.row {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.row-reverse {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.col {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.col-reverse {
+	display: flex;
+	flex-flow: column-reverse nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.nowrap {
+	flex-wrap: nowrap;
+	overflow: hidden;
+}
+.wrap {
+	flex-wrap: wrap;
+}
+
+@each $media in sm, md, lg, xl, 2xl {
+	@media (--$(media)) {
+		.row\@$(media) {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		.row-reverse\@$(media) {
+			display: flex;
+			flex-flow: row-reverse nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.col\@$(media) {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		.col-reverse\@$(media) {
+			display: flex;
+			flex-flow: column-reverse nowrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.nowrap\@$(media) {
+			flex-wrap: nowrap;
+			overflow: hidden;
+		}
+		.wrap\@$(media) {
+			flex-wrap: wrap;
+		}
+	}
+}

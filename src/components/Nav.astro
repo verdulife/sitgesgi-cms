@@ -1,0 +1,51 @@
+<nav class="row jcenter wfull">
+  <main class="row jbetween acenter wfull">
+    <aside class="row acenter">
+      <a href="/">
+        <img src="/logo-blue.svg" alt="Sitges Grup Independent" />
+      </a>
+
+      <ul class="row">
+        <li>
+          <a href="/">Inici</a>
+        </li>
+        <li>
+          <a href="/noticies">Noticies</a>
+        </li>
+        <li>
+          <a href="/qui-som">Qui som</a>
+        </li>
+        <li>
+          <a href="/eleccions-2023">Eleccions 2023</a>
+        </li>
+        <li>
+          <a href="/contacte">Contacte</a>
+        </li>
+      </ul>
+    </aside>
+
+    <a href="mailto:info@sitgesgi.cat"><b>info@sitgesgi.cat</b></a>
+  </main>
+</nav>
+
+<style>
+  nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--base);
+    padding: 1em 2em;
+  }
+
+  main {
+    max-width: var(--media-xl);
+
+    & aside {
+      gap: 2em;
+
+      & ul {
+        gap: 2em;
+      }
+    }
+  }
+</style>

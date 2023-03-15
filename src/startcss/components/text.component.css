@@ -1,0 +1,32 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+@custom-selector :--text p, span, input, textarea, select, option, optgroup;
+
+/* 🎨 dynamic properties 🎨 */
+
+:--text {
+	--color: var(--base-800);
+}
+
+/* ⚡ startcss reset ⚡ */
+
+:--text {
+	font-size: var(--font-sm);
+	font-weight: normal;
+	line-height: 1.6;
+	color: var(--color);
+
+	& strong,
+	& b {
+		font-family: var(--font-title);
+		font-weight: normal;
+		text-shadow: 0 0 0.1em currentColor;
+	}
+}

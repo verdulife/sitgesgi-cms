@@ -1,0 +1,38 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+const { post } = Astro.props;
+const { slug, data } = post;
+const { title, description, pubDate, heroImage } = data;
+---
+
+<article class="col">
+  <a class="col full" href={slug}>
+    <img class="wfull" src={heroImage} alt={title} />
+
+    <main class="col wfull">
+      <small><FormattedDate date={pubDate} /></small>
+      <h3>{title}</h3>
+      <p>
+        {description}
+      </p>
+    </main>
+  </a>
+</article>
+
+<style>
+  article {
+    width: calc(100% / 3 - 1em);
+    background-color: var(--base);
+    border: 1px solid var(--base-100);
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+
+    & main {
+      gap: 1em;
+      padding: 1em;
+    }
+  }
+</style>

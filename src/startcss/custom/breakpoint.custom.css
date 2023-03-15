@@ -1,0 +1,33 @@
+/* 
+          __             __                
+    _____/ /_____ ______/ /________________
+   / ___/ __/ __ `/ ___/ __/ ___/ ___/ ___/
+  (__  ) /_/ /_/ / /  / /_/ /__(__  |__  ) 
+ /____/\__/\__,_/_/   \__/\___/____/____/  v0.0.1 
+
+*/
+
+/* 🎨 custom properties 🎨 */
+
+:root {
+	--media-sm: 640px;
+	--media-md: 768px;
+	--media-lg: 1024px;
+	--media-xl: 1280px;
+	--media-xxl: 1536px;
+}
+
+@custom-media --sm (width <= 640px);
+@custom-media --md (width <= 768px);
+@custom-media --lg (width <= 1024px);
+@custom-media --xl (width <= 1280px);
+@custom-media --xxl (width <= 1536px);
+@custom-media --portrait (orientation: portrait);
+@custom-media --landscape (orientation: landscape);
+
+/* ⚡ startcss reset ⚡ */
+
+@custom-media --reduced-motion (prefers-reduced-motion: reduce);
+@custom-media --touch (hover: none);
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --light (prefers-color-scheme: light);
