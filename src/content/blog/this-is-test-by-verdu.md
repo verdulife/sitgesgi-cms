@@ -1,5 +1,5 @@
 ---
-layout: src/layouts/BlogPost.astro
+layout: ../../layouts/BlogPost.astro
 title: This is test by verdu
 description: This is a cms test form decap cms
 pubDate: 2023-03-15T09:51:51.261Z
