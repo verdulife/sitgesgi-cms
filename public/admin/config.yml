@@ -10,7 +10,7 @@ public_folder: "uploads"
 collections:
   - name: "pubs"
     label: "Publicaciones"
-    folder: "src/content/blog"
+    folder: "src/pages/blog"
     create: true
     slug: "{{slug}}"
     fields:
