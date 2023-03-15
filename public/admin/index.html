@@ -11,6 +11,26 @@
 
 <body>
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle(
+      "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap"
+    );
+    CMS.registerPreviewStyle("/pubs-preview.css");
+    var PubsPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var date = entry.getIn(["data", "date"]);
+        return h(
+          "div",
+          { className: "content" },
+          h("h1", {}, entry.getIn(["data", "title"])),
+          h("time", {}, entry.getIn(["data", "date"])),
+          h("div", {}, this.props.widgetFor("body"))
+        );
+      },
+    });
+    CMS.registerPreviewTemplate("pubs", PubsPreview);
+  </script>
 </body>
 
 </html>

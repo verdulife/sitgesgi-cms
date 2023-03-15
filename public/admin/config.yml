@@ -11,12 +11,8 @@ collections:
   - name: "pubs"
     label: "Publicaciones"
     folder: "src/content/blog"
-    extension: "md"
-    format: "frontmatter"
     create: true
     slug: "{{slug}}"
-    identifier_field: slug
-    summary: "{{title}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
