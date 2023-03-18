@@ -1,16 +1,24 @@
-<header class="col fcenter wfull">
-  <h1><b>Amb tu, seguim creant futur</b></h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, accusantium
-    laboriosam voluptas illum quam expedita in quas aliquam natus vitae ducimus
-    rem labore impedit necessitatibus perferendis inventore possimus, debitis
-    modi?
-  </p>
+---
+import { getCollection } from "astro:content";
+
+const covers = await getCollection("cover");
+const { data } = covers[0];
+const { title, description, coverImage } = data;
+---
+
+<header
+  class="col fcenter wfull"
+  style={`background-image: url(${coverImage})`}
+>
+  <h1><b>{title}</b></h1>
+  <p>{description}</p>
 </header>
 
 <style>
   header {
-    background: var(--accent-900) url("/sitges.jpg") no-repeat center;
+    background-color: var(--accent-900);
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-blend-mode: overlay;
     padding: 200px 4em;

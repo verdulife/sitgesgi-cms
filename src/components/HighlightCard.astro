@@ -1,0 +1,24 @@
+---
+const { highlight } = Astro.props;
+const { data } = highlight;
+const { title, link } = data;
+---
+
+<article class="col">
+  <a class="col full" href={link}>
+    <h2>{title}</h2>
+  </a>
+</article>
+
+<style>
+  article {
+    width: calc(100% / 3 - 1em);
+    background-color: var(--base);
+    border: 1px solid var(--base-100);
+    padding: 1em;
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+</style>

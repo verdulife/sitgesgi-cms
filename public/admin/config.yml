@@ -8,7 +8,7 @@ media_folder: "/public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "pubs"
+  - name: "blog"
     label: "Publicaciones"
     folder: "/src/content/blog"
     create: true
@@ -20,18 +20,18 @@ collections:
       - { label: "Imatge de portada", name: "coverImage", widget: "image" }
       - { label: "Contingut", name: "body", widget: "markdown" }
 
-  - name: "covers"
+  - name: "cover"
     label: "Portades"
-    folder: "/src/content/covers"
+    folder: "/src/content/cover"
     create: true
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Descripcio", name: "description", widget: "text" }
       - { label: "Imatge", name: "coverImage", widget: "image" }
 
-  - name: "highlights"
+  - name: "highlight"
     label: "Destacats"
-    folder: "/src/content/highlights"
+    folder: "/src/content/highlight"
     create: true
     fields:
       - { label: "Títol", name: "title", widget: "string" }
