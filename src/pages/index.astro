@@ -1,16 +1,11 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Nav from "../components/Nav.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import NewCard from "../components/NewCard.astro";
-import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/consts";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-);
-
+import BaseHead from "@components/BaseHead.astro";
+import Nav from "@components/Nav.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import News from "@src/components/sections/News.astro";
 ---
 
 <!DOCTYPE html>
@@ -24,13 +19,7 @@ const posts = (await getCollection("blog")).sort(
     <Nav />
     <Header />
 
-    <section class="col wfull">
-      <h2 class="tcenter wfull"><b>Destacats</b></h2>
-
-      <main class="row wrap astretch wfull">
-        {posts.map((post) => <NewCard post={post} />)}
-      </main>
-    </section>
+    <News />
 
     <Footer />
 

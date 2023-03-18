@@ -14,8 +14,25 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
-      - { label: "Featured Image", name: "heroImage", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Descripcio", name: "description", widget: "text" }
+      - { label: "Data de publicació", name: "pubDate", widget: "datetime" }
+      - { label: "Imatge de portada", name: "coverImage", widget: "image" }
+      - { label: "Contingut", name: "body", widget: "markdown" }
+
+  - name: "covers"
+    label: "Portades"
+    folder: "/src/content/covers"
+    create: false
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Descripcio", name: "description", widget: "text" }
+      - { label: "Imatge", name: "coverImage", widget: "image" }
+
+  - name: "highlights"
+    label: "Destacats"
+    folder: "/src/content/highlights"
+    create: false
+    fields:
+      - { label: "Títol", name: "title", widget: "string" }
+      - { label: "Enllaç", name: "link", widget: "string" }

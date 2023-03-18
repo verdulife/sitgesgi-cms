@@ -12,39 +12,32 @@
 /* 🎨 dynamic properties 🎨 */
 
 :--heading {
-	color: var(--base-900);
+  color: var(--base-900);
 }
 
 /* ⚡ startcss reset ⚡ */
 
 :--heading {
-	color: var(--color);
-	font-family: var(--font-base);
-	font-weight: normal;
-
-	& strong,
-	& b {
-		font-family: var(--font-title);
-		font-weight: normal;
-		text-shadow: 0 0 0.1em currentColor;
-	}
+  color: var(--color);
+  font-family: var(--font-base);
+  font-weight: normal;
 }
 
 h1 {
-	font-size: var(--font-2xl);
+  font-size: var(--font-2xl);
 }
 h2 {
-	font-size: var(--font-xl);
+  font-size: var(--font-xl);
 }
 h3 {
-	font-size: var(--font-lg);
+  font-size: var(--font-lg);
 }
 h4 {
-	font-size: var(--font-md);
+  font-size: var(--font-md);
 }
 h5 {
-	font-size: var(--font-sm);
+  font-size: var(--font-sm);
 }
 h6 {
-	font-size: var(--font-xs);
+  font-size: var(--font-xs);
 }

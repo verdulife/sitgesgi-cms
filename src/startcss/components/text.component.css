@@ -12,21 +12,14 @@
 /* 🎨 dynamic properties 🎨 */
 
 :--text {
-	--color: var(--base-800);
+  --color: var(--base-800);
 }
 
 /* ⚡ startcss reset ⚡ */
 
 :--text {
-	font-size: var(--font-sm);
-	font-weight: normal;
-	line-height: 1.6;
-	color: var(--color);
-
-	& strong,
-	& b {
-		font-family: var(--font-title);
-		font-weight: normal;
-		text-shadow: 0 0 0.1em currentColor;
-	}
+  font-size: var(--font-sm);
+  font-weight: normal;
+  line-height: 1.6;
+  color: var(--color);
 }

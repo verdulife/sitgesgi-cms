@@ -1,14 +1,14 @@
 ---
-import FormattedDate from "./FormattedDate.astro";
+import FormattedDate from "@components/FormattedDate.astro";
 
 const { post } = Astro.props;
 const { slug, data } = post;
-const { title, description, pubDate, heroImage } = data;
+const { title, description, pubDate, coverImage } = data;
 ---
 
 <article class="col">
   <a class="col full" href={slug}>
-    <img class="wfull" src={heroImage} alt={title} />
+    <img class="wfull" src={coverImage} alt={title} />
 
     <main class="col wfull">
       <small><FormattedDate date={pubDate} /></small>
