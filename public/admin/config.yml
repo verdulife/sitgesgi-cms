@@ -23,7 +23,7 @@ collections:
   - name: "covers"
     label: "Portades"
     folder: "/src/content/covers"
-    create: false
+    create: true
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Descripcio", name: "description", widget: "text" }
@@ -32,7 +32,7 @@ collections:
   - name: "highlights"
     label: "Destacats"
     folder: "/src/content/highlights"
-    create: false
+    create: true
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Enllaç", name: "link", widget: "string" }
