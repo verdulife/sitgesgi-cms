@@ -35,6 +35,7 @@
 .scrollbar[horizontal] > * {
 	display: inline-flex;
 	white-space: normal;
+	vertical-align:text-top;
 }
 .scrollbar[horizontal].snap {
 	scroll-snap-type: x mandatory;

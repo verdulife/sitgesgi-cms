@@ -1,31 +1,66 @@
 ---
+import { literal } from "astro/zod";
 import { getCollection } from "astro:content";
 
 const covers = await getCollection("cover");
-const { data } = covers[0];
-const { title, description, coverImage } = data;
 ---
 
-<header
-  class="col fcenter wfull"
-  style={`background-image: url(${coverImage})`}
->
-  <h1><b>{title}</b></h1>
-  <p>{description}</p>
+<header class="wfull">
+  <ul class="slider scrollbar snap" horizontal>
+    {
+      covers.map(({ data }) => (
+        <li class="full">
+          <article
+            class="col fcenter full"
+            style={`background-image: url(${data.coverImage})`}
+          >
+            <h1>
+              <b>{data.title}</b>
+            </h1>
+            <p>{data.description}</p>
+          </article>
+        </li>
+      ))
+    }
+  </ul>
 </header>
 
+<script>
+  const slider = document.querySelector(".slider");
+  const slideTime = 7000;
+  const maxSlide = 3;
+  let countSlide = 0;
+
+  function slideOne() {
+    slider?.scrollBy({ left: 100 });
+    countSlide++;
+  }
+
+  function resetSlide() {
+    slider?.scrollTo({ left: 0 });
+    countSlide = 0;
+  }
+
+  setInterval(() => {
+    if (countSlide === maxSlide) resetSlide();
+    else slideOne();
+  }, slideTime);
+</script>
+
 <style>
-  header {
-    background-color: var(--accent-900);
+  ul {
+    max-height: 45vh;
+    min-height: 500px;
+  }
+
+  article {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode: overlay;
-    padding: 200px 4em;
 
     & h1,
     & p {
-      max-width: 700px;
+      max-width: var(--media-lg);
       color: var(--base);
       text-align: center;
     }

@@ -21,6 +21,10 @@ const cover = defineCollection({
     title: z.string(),
     description: z.string(),
     coverImage: z.string(),
+    updatedDate: z
+      .string()
+      .optional()
+      .transform((str) => (str ? new Date(str) : undefined)),
   }),
 });
 
@@ -28,6 +32,11 @@ const highlight = defineCollection({
   schema: z.object({
     title: z.string(),
     link: z.string(),
+    image: z.string(),
+    updatedDate: z
+      .string()
+      .optional()
+      .transform((str) => (str ? new Date(str) : undefined)),
   }),
 });
 
