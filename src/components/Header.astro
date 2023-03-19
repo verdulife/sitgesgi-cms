@@ -1,5 +1,4 @@
 ---
-import { literal } from "astro/zod";
 import { getCollection } from "astro:content";
 
 const covers = await getCollection("cover");
@@ -54,15 +53,19 @@ const covers = await getCollection("cover");
   }
 
   article {
+    background-color: hsl(var(--base-900-hsl), 0.6);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-blend-mode: multiply;
+    padding: 2em;
 
     & h1,
     & p {
       max-width: var(--media-lg);
       color: var(--base);
       text-align: center;
+      text-shadow: 0 0 50px hsl(var(--base-900-hsl), 0.4);
     }
   }
 </style>
