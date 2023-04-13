@@ -12,12 +12,7 @@ const covers = await getCollection("cover");
           <article
             class="col fcenter full"
             style={`background-image: url(${data.coverImage})`}
-          >
-            <h1>
-              <b>{data.title}</b>
-            </h1>
-            <p>{data.description}</p>
-          </article>
+          />
         </li>
       ))
     }
@@ -47,13 +42,17 @@ const covers = await getCollection("cover");
 </script>
 
 <style>
+  header {
+    background: url("/banner-bg.svg") no-repeat center;
+    background-size: cover;
+  }
+
   ul {
     max-height: 45vh;
     min-height: 500px;
   }
 
   article {
-    background-color: hsl(var(--base-900-hsl), 0.6);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

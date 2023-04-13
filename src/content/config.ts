@@ -18,8 +18,6 @@ const blog = defineCollection({
 
 const cover = defineCollection({
   schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
     coverImage: z.string(),
     updatedDate: z
       .string()
