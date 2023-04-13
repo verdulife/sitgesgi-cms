@@ -9,6 +9,7 @@ const covers = await getCollection("cover");
     {
       covers.map(({ data }) => (
         <li class="full">
+          <h1>{data.title}</h1>
           <article
             class="col fcenter full"
             style={`background-image: url(${data.coverImage})`}

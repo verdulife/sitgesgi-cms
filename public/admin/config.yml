@@ -25,6 +25,7 @@ collections:
     folder: "/src/content/cover"
     create: true
     fields:
+      - { label: "Títol", name: "title", widget: "string" }
       - { label: "Imatge", name: "coverImage", widget: "image" }
 
   - name: "highlight"
