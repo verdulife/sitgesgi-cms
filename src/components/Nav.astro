@@ -1,3 +1,7 @@
+---
+import Menu from "@components/icons/Menu.astro";
+---
+
 <nav class="row jcenter wfull">
   <main class="row jbetween acenter wfull">
     <aside class="row acenter">
@@ -5,18 +9,40 @@
         <img src="/logo-blue.svg" alt="Sitges Grup Independent" />
       </a>
 
-      <ul class="row">
+      <ul class="menu row">
         <li>
           <a href="/">Inici</a>
         </li>
         <li>
           <a href="/noticies">Noticies</a>
         </li>
-        <li>
-          <a href="/qui-som">Qui som</a>
+        <li tabindex="0">
+          <label>Qui som</label>
+          <ul>
+            <li>
+              <a href="/sitgesgi">Sitges GI</a>
+            </li>
+            <li>
+              <a href="/comite-executiu">Comite executiu</a>
+            </li>
+            <li>
+              <a href="/estatuts">Estatuts</a>
+            </li>
+            <li>
+              <a href="/manifest">Manifest</a>
+            </li>
+          </ul>
         </li>
-        <li>
-          <a href="/eleccions-2023">Eleccions 2023</a>
+        <li tabindex="0">
+          <label>Eleccions 2023</label>
+          <ul>
+            <li>
+              <a href="/llista">Llista</a>
+            </li>
+            <li>
+              <a href="/programa-electoral">Programa electoral</a>
+            </li>
+          </ul>
         </li>
         <li>
           <a href="/contacte">Contacte</a>
@@ -24,9 +50,24 @@
       </ul>
     </aside>
 
-    <a href="mailto:info@sitgesgi.cat"><b>info@sitgesgi.cat</b></a>
+    <span class="mobileMenu">
+      <Menu />
+    </span>
+
+    <a class="contact" href="mailto:info@sitgesgi.cat"
+      ><b>info@sitgesgi.cat</b></a
+    >
   </main>
 </nav>
+
+<script defer>
+  const menuBtn = document.querySelector(".mobileMenu");
+  const menu = document.querySelector(".menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("visible");
+  });
+</script>
 
 <style>
   nav {
@@ -34,23 +75,93 @@
     top: 0;
     left: 0;
     background-color: var(--base);
-    padding: 1em 2em;
+    border-bottom: 1px solid var(--base-100);
+    padding: 0 2em;
     z-index: 1;
+
+    @media (max-width: 720px) {
+      padding: 0 1em;
+    }
   }
 
   main {
     max-width: var(--media-xl);
+  }
 
-    & aside {
-      gap: 2em;
+  aside {
+    gap: 2em;
+  }
+
+  ul {
+    @media (max-width: 720px) {
+      position: absolute;
+      top: 100%;
+      right: -100%;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column !important;
+      background-color: var(--base);
+      opacity: 0;
+      pointer-events: none;
+      transition: 150ms;
+    }
+
+    & label {
+      cursor: pointer;
+      padding: 2em 1em;
+    }
+  }
+
+  .visible {
+    right: 0;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  li {
+    display: flex;
+    transition: 150ms;
+
+    & a {
+      padding: 2em 1em;
+    }
+
+    & ul {
+      position: absolute;
+      top: 100%;
+      background-color: var(--base);
+      border: 1px solid var(--base-100);
+      opacity: 0;
+      pointer-events: none;
+      transition: 150ms;
+
+      & a {
+        padding: 1em;
+      }
+    }
+
+    &:hover {
+      background-color: hsl(var(--accent-hsl), 0.1);
 
       & ul {
-        gap: 2em;
-
-        @media (max-width: 640px) {
-          display: none !important;
-        }
+        opacity: 1;
+        pointer-events: all;
       }
+    }
+  }
+
+  span {
+    display: none;
+  }
+
+  @media (max-width: 720px) {
+    span {
+      display: inherit;
+      padding: 2em 0;
+    }
+
+    .contact {
+      display: none !important;
     }
   }
 </style>

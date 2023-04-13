@@ -1,0 +1,39 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "@src/consts";
+
+import BaseHead from "@components/BaseHead.astro";
+import Nav from "@components/Nav.astro";
+import Footer from "@components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  </head>
+  <body class="col acenter full">
+    <Nav />
+    <slot />
+    <Footer />
+
+    <script>
+      declare global {
+        interface Window {
+          netlifyIdentity: any;
+        }
+      }
+
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user: any) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

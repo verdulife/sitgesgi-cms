@@ -10,7 +10,7 @@
 /* 🎨 dynamic properties 🎨 */
 
 body {
-	--background: var(--base-100);
+	--background: var(--base);
 	--color: var(--base-900);
 	--border-radius: 0.75em;
 

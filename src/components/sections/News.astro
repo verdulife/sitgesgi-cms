@@ -14,7 +14,7 @@ const posts = (await getCollection("blog")).sort(
     {posts.map((post) => <NewCard post={post} />)}
   </main>
 
-  <a role="button" href="/noticies">MES NOTICIES</a>
+  <a role="button" href="/noticies">Mes notícies</a>
 </section>
 
 <style>
@@ -22,6 +22,10 @@ const posts = (await getCollection("blog")).sort(
     max-width: var(--media-lg);
     gap: 2em;
     padding: 4em 1em;
+
+    @media (max-width: 720px) {
+      padding: 2em 0.5em;
+    }
   }
 
   main {
@@ -30,6 +34,16 @@ const posts = (await getCollection("blog")).sort(
 
     @media (max-width: 640px) {
       column-count: 2;
+      column-gap: 0.5em;
+    }
+  }
+
+  a {
+    margin-top: 2em;
+
+    @media (max-width: 720px) {
+      width: 70%;
+      margin-top: 1em;
     }
   }
 </style>

@@ -31,7 +31,6 @@ const highlight = defineCollection({
   schema: z.object({
     title: z.string(),
     link: z.string(),
-    image: z.string(),
     updatedDate: z
       .string()
       .optional()

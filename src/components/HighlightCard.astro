@@ -1,12 +1,12 @@
 ---
 const { highlight } = Astro.props;
 const { data } = highlight;
-const { title, link, image } = data;
+const { title, link } = data;
 ---
 
-<article class="col">
+<article class="col acenter">
   <a class="row acenter full" href={link}>
-    <img src={image} alt={title} />
+    <span class="row"></span>
     <h3>{title}</h3>
   </a>
 </article>
@@ -16,21 +16,29 @@ const { title, link, image } = data;
     width: calc(100% / 3 - 1em);
     background-color: var(--base);
     border: 1px solid var(--base-100);
-    border-radius: 0.5em;
+    border-radius: 1em;
     box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.2);
     overflow: hidden;
 
-    @media (max-width: 640px) {
+    @media (max-width: 720px) {
       width: 100%;
     }
 
-    & img {
-      width: 100px;
-      min-width: 100px;
+    & span {
+      width: 80px;
+      min-width: 80px;
       aspect-ratio: 1;
+      background-color: var(--accent);
+      clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
+      
+      @media (max-width: 720px) {
+        width: 50px;
+        min-width: 60px;
+      }
     }
 
     & h3 {
+      font-size: var(--font-md);
       padding: 0 1em;
     }
   }

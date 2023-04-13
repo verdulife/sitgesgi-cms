@@ -47,19 +47,27 @@ const covers = await getCollection("cover");
   header {
     background: url("/banner-bg.svg") no-repeat center;
     background-size: cover;
+    border-bottom: 1px solid var(--base-100);
   }
 
   ul {
-    max-height: 45vh;
-    min-height: 500px;
-  }
+    min-height: 35vw;
 
+    @media (max-width: 720px) {
+      min-height: 60vw;
+    }
+  }
+  
   article {
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: bottom;
+    background-size: 120% auto;
     background-blend-mode: multiply;
     padding: 2em;
+    
+    @media (max-width: 720px) {
+      background-size: 170% auto;
+    }
 
     & h1 {
       position: absolute;

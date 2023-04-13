@@ -12,13 +12,13 @@
 /* 🎨 dynamic properties 🎨 */
 
 :--button {
-  --background-color: hsl(var(--base-900-hsl), 0.05);
-  --color: var(--base-800);
-  --border: 1px solid hsl(var(--base-900-hsl), 0.05);
+  --background-color: var(--accent);
+  --color: var(--base);
+  --border: 1px solid transparent;
 
   &:hover,
   &:focus {
-    --background-color: hsl(var(--base-900-hsl), 0.1);
+    --background-color: var(--accent-700);
   }
 }
 
@@ -38,18 +38,17 @@
 :--button {
   cursor: pointer;
   background-color: var(--background-color);
-  backdrop-filter: blur(5px);
   color: var(--color);
-  font-family: var(--font-title);
   font-size: var(--font-xs);
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   border: var(--border);
-  border-radius: 0.3em;
-  text-shadow: 0 0 0.1em currentColor;
+  border-radius: 0.75em;
+  box-shadow: 0 2px 5px hsl(var(--base-500-hsl), 0.6);
   user-select: none;
   -webkit-user-drag: none;
-  padding: var(--spacing-md) var(--spacing-2xl);
+  padding: var(--spacing-md) var(--spacing-4xl);
   transition: 150ms;
 }
 

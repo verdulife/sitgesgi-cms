@@ -35,4 +35,3 @@ collections:
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Enllaç", name: "link", widget: "string" }
-      - { label: "Imatge", name: "image", widget: "image" }

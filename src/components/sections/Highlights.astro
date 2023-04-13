@@ -6,9 +6,7 @@ const highlights = await getCollection("highlight");
 ---
 
 <section class="col wfull">
-  <h2 class="tcenter wfull"><b>Destacats</b></h2>
-
-  <main class="row wrap astretch wfull">
+  <main class="row jcenter wrap wfull">
     {highlights.map((highlight) => <HighlightCard highlight={highlight} />)}
   </main>
 </section>
@@ -16,11 +14,18 @@ const highlights = await getCollection("highlight");
 <style>
   section {
     max-width: var(--media-lg);
-    gap: 2em;
     padding: 4em 1em;
+
+    @media (max-width: 720px) {
+      padding: 2em 1em;
+    }
   }
 
   main {
     gap: 1em;
+
+    @media (max-width: 720px) {
+      gap: 0.5em;
+    }
   }
 </style>

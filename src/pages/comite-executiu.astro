@@ -1,0 +1,57 @@
+---
+import Main from "@src/layouts/Main.astro";
+---
+
+<Main>
+  <section class="col acenter wfull">
+    <h1 class="tcenter">Comité executiu de Sitges GI</h1>
+
+    <ul>
+      <li>Presidente David Martínez Lluís</li>
+      <li>Secretario General Pierre Butin</li>
+      <li>Vicepresidenta 1º Nadia Viana Pascual</li>
+      <li>Vicepresidenta 2ª Silvia Peñas Borja</li>
+      <li>Vicepresidente 3º Guillem Escolà Hueso</li>
+      <li>Secretario/a Manel Aleacar Zapata</li>
+      <li>Vicesecretario/a Marc Benazet Blanes</li>
+      <li>Responsable de Comunicación Owen Holden</li>
+      <li>Tesorero/a Cristina Guiu Navarro</li>
+      <li>1º Vocal Carles Guerrero Castillo</li>
+      <li>2º Vocal Maria José Garriga Cots</li>
+      <li>3º Vocal Mercè Banchs Guiral</li>
+      <li>4º Vocal Xavier Guerrero Castillo</li>
+      <li>5º Vocal Petra Ballantyne</li>
+      <li>6º Vocal Calan Frame Suárez</li>
+      <li>7º Vocal Mercedes Yunquera Vega</li>
+      <li>8º Vocal Susana Domenech Cots</li>
+      <li>9º Vocal Núria Garriga Cots</li>
+      <li>10º Vocal Manel Gómez Sanchís</li>
+      <li>11º Vocal Àlex Rubio Algarra</li>
+      <li>12º Vocal Alrun Jimeno Urban</li>
+      <li>13º Vocal Vinyet Lluís Pàmies</li>
+      <li>14º Vocal Jordi Hernández Bonet</li>
+    </ul>
+  </section>
+</Main>
+
+<style>
+  section {
+    max-width: var(--media-lg);
+    gap: 2em;
+    padding: 4em 1em;
+
+    @media (max-width: 720px) {
+      padding: 2em 1em;
+    }
+  }
+
+  li {
+    text-align: center;
+    border-bottom: 1px solid var(--base-100);
+    padding: 1em;
+
+    &:last-of-type {
+      border: none;
+    }
+  }
+</style>
