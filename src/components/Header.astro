@@ -9,11 +9,12 @@ const covers = await getCollection("cover");
     {
       covers.map(({ data }) => (
         <li class="full">
-          <h1>{data.title}</h1>
           <article
             class="col fcenter full"
             style={`background-image: url(${data.coverImage})`}
-          />
+          >
+            <h1>{data.title}</h1>
+          </article>
         </li>
       ))
     }
@@ -60,12 +61,10 @@ const covers = await getCollection("cover");
     background-blend-mode: multiply;
     padding: 2em;
 
-    & h1,
-    & p {
-      max-width: var(--media-lg);
-      color: var(--base);
-      text-align: center;
-      text-shadow: 0 0 50px hsl(var(--base-900-hsl), 0.4);
+    & h1 {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
     }
   }
 </style>
