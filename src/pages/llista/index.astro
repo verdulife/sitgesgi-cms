@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+
+import Main from "@src/layouts/Main.astro";
+import MemberCard from "@components/MemberCard.astro";
+
+const members = (await getCollection("member")).sort(
+  (a, b) => a.data.number - b.data.number
+);
+---
+
+<Main>
+  <section class="col wfull">
+    <h1 class="tcenter wfull">Llista</h1>
+
+    <ul class="row jcenter wrap wfull">
+      {
+        members.map((member) => (
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+          <li>
+            <MemberCard member={member} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <style>
+    section {
+      max-width: var(--media-lg);
+      gap: 2em;
+      padding: 4em 1em;
+
+      @media (max-width: 720px) {
+        padding: 2em 1em;
+      }
+    }
+
+    ul {
+      gap: 1em;
+    }
+
+    li {
+      width: calc(100% / 3 - 1em);
+    }
+  </style>
+</Main>

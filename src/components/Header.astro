@@ -11,7 +11,7 @@ const covers = await getCollection("cover");
         <li class="full">
           <article
             class="col fcenter full"
-            style={`background-image: url(${data.coverImage})`}
+            style={`background-image: url(${data.image})`}
           >
             <h1>{data.title}</h1>
           </article>
@@ -57,14 +57,14 @@ const covers = await getCollection("cover");
       min-height: 60vw;
     }
   }
-  
+
   article {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 120% auto;
     background-blend-mode: multiply;
     padding: 2em;
-    
+
     @media (max-width: 720px) {
       background-size: 170% auto;
     }

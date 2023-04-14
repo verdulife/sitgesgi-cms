@@ -3,91 +3,18 @@ import FormattedDate from "@components/FormattedDate.astro";
 
 const { post } = Astro.props;
 const { slug, data } = post;
-const { title, description, pubDate, coverImage } = data;
+const { title, description, pubDate, image } = data;
 ---
 
 <article class="col wfull">
   <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
+    <img class="wfull" src={image} alt={title} />
 
     <main class="col wfull">
       <small><FormattedDate date={pubDate} /></small>
       <h3>{title}</h3>
       <p>
         {description}
-        {description}
-        {description}
-        {description}
-      </p>
-    </main>
-  </a>
-</article>
-<article class="col wfull">
-  <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
-
-    <main class="col wfull">
-      <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
-        {description}
-        {description}
-        {description}
-      </p>
-    </main>
-  </a>
-</article>
-<article class="col wfull">
-  <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
-
-    <main class="col wfull">
-      <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
-        {description}
-        {description}
-      </p>
-    </main>
-  </a>
-</article>
-<article class="col wfull">
-  <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
-
-    <main class="col wfull">
-      <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
-        {description}
-      </p>
-    </main>
-  </a>
-</article>
-<article class="col wfull">
-  <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
-
-    <main class="col wfull">
-      <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
-        {description}
-        {description}
-        {description}
-        {description}
-      </p>
-    </main>
-  </a>
-</article>
-<article class="col wfull">
-  <a class="col full" href={`/noticies/${slug}`}>
-    <img class="wfull" src={coverImage} alt={title} />
-
-    <main class="col wfull">
-      <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
         {description}
         {description}
         {description}
@@ -106,7 +33,7 @@ const { title, description, pubDate, coverImage } = data;
     box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.2);
     margin-bottom: 1em;
     overflow: hidden;
-    
+
     @media (max-width: 720px) {
       width: 100%;
       margin-bottom: 0.5em;

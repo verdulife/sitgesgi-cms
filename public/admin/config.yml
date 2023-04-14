@@ -8,16 +8,16 @@ media_folder: "/public/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "blog"
+  - name: "post"
     label: "Publicaciones"
-    folder: "/src/content/blog"
+    folder: "/src/content/post"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Descripció", name: "description", widget: "text" }
       - { label: "Data de publicació", name: "pubDate", widget: "datetime" }
-      - { label: "Imatge de portada", name: "coverImage", widget: "image" }
+      - { label: "Imatge de portada", name: "image", widget: "image" }
       - { label: "Contingut", name: "body", widget: "markdown" }
 
   - name: "cover"
@@ -26,7 +26,7 @@ collections:
     create: true
     fields:
       - { label: "Títol", name: "title", widget: "string" }
-      - { label: "Imatge", name: "coverImage", widget: "image" }
+      - { label: "Imatge", name: "image", widget: "image" }
 
   - name: "highlight"
     label: "Destacats"
@@ -40,6 +40,7 @@ collections:
     label: "Llista"
     folder: "/src/content/member"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Nom", name: "title", widget: "string" }
       - { label: "Número", name: "number", widget: "number" }

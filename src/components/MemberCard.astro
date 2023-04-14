@@ -1,0 +1,66 @@
+---
+const { member } = Astro.props;
+const { data, slug } = member;
+const { title, number, description, image } = data;
+---
+
+<article class="col wfull">
+  <a class="col full" href={`/llista/${slug}`}>
+    <img class="wfull" src={image} alt={title} />
+
+    <main class="col acenter wfull">
+      <p class="row fcenter"><strong>{number}</strong></p>
+      <h3>{title}</h3>
+    </main>
+  </a>
+</article>
+
+<style>
+  article {
+    background-color: var(--base);
+    border: 1px solid var(--base-100);
+    border-bottom: 4px solid var(--accent);
+    border-radius: 1em;
+    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.2);
+    overflow: hidden;
+
+    @media (max-width: 720px) {
+      width: 100%;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    & img {
+      aspect-ratio: 9/10;
+      object-fit: cover;
+      object-position: top;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    & main {
+      gap: 1em;
+      padding: 1.5em;
+      padding-top: 0;
+
+      @media (max-width: 720px) {
+        padding: 0.5em;
+      }
+    }
+
+    & h3 {
+      font-size: var(--font-md);
+    }
+
+    & p {
+      width: 40px;
+      height: 40px;
+      background-color: var(--accent);
+      color: var(--base);
+      text-align: center;
+      font-size: var(--font-lg);
+      border-radius: 50%;
+      margin-top: -1em;
+      z-index: 1;
+    }
+  }
+</style>
