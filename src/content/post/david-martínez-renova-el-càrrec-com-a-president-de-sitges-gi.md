@@ -6,7 +6,7 @@ description: L’Assemblea General de Sitges GI celebrat aquest dijous al vespre
 pubDate: 2023-04-14T15:54:36.843Z
 image: https://sitgesgi.cat/wp-content/uploads/2019/06/foto-David-M-1024x654.jpg
 ---
-[![David Martínez reescollit president de Sitges GI](http://sitgesgi.cat/wp-content/uploads/2019/06/foto-David-M-1024x654.jpg)](http://sitgesgi.cat/wp-content/uploads/2019/06/foto-David-M.jpg)
+[![David Martínez reescollit president de Sitges GI](https://sitgesgi.cat/wp-content/uploads/2019/06/foto-David-M-1024x654.jpg)](https://sitgesgi.cat/wp-content/uploads/2019/06/foto-David-M.jpg)
 
 L’Assemblea General de Sitges GI celebrat aquest dijous al vespre, ha reescollit a David Martínez Lluís com a president del grup municipal fins al 2025. Martínez s’ha mostrat molt satisfet del bon estat de salut del grup municipal que no ha parat de créixer en els darrers anys. Tal ha estat el creixement que actualment Sitges GI compta amb un comitè executiu format per 23 persones.
 
