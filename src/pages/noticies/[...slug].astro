@@ -1,0 +1,53 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Main from "@src/layouts/Main.astro";
+import Markdown from "@components/Markdown.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("post");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"post">;
+
+const post = Astro.props;
+const { title, pubDate } = post.data;
+const { Content } = await post.render();
+---
+
+<Main {...post.data}>
+  <section class="post col wfull">
+    <header>
+      <p><FormattedDate date={pubDate} /></p>
+      <h1>{title}</h1>
+    </header>
+
+    <Markdown>
+      <Content />
+    </Markdown>
+  </section>
+</Main>
+
+<style>
+  section {
+    max-width: var(--media-lg);
+    gap: 2em;
+    padding: 4em 1em;
+
+    @media (max-width: 720px) {
+      padding: 2em 1em;
+    }
+  }
+
+  header {
+    border-left: 10px solid var(--accent);
+    padding: 2em;
+
+    & p {
+      color: var(--base-500);
+    }
+  }
+</style>

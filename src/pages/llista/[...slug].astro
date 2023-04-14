@@ -12,16 +12,16 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"member">;
 
 const member = Astro.props;
-let { image, title, number, description } = member.data;
+let { image, title, description } = member.data;
 description = description.replace(/(?:\r\n|\r|\n)/g, "<br>");
 ---
 
 <Main {...member.data}>
   <section class="col wfull">
-    <img src={image} alt={title} />
     <h1>{title}</h1>
-    <small>{number}</small>
-    <p>
+
+    <p class="wfull">
+      <img src={image} alt={title} />
       <Fragment set:html={description} />
     </p>
   </section>
@@ -30,11 +30,25 @@ description = description.replace(/(?:\r\n|\r|\n)/g, "<br>");
 <style>
   section {
     max-width: var(--media-lg);
-    gap: 2em;
+    gap: 3em;
     padding: 4em 1em;
 
     @media (max-width: 720px) {
       padding: 2em 1em;
     }
+  }
+
+  h1 {
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+  }
+
+  img {
+    width: 30%;
+    min-width: 200px;
+    border-radius: 1em;
+    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
+    float: left;
+    margin: 0 2em 2em 0;
   }
 </style>

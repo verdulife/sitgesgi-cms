@@ -1,7 +1,7 @@
 ---
 const { member } = Astro.props;
 const { data, slug } = member;
-const { title, number, description, image } = data;
+const { title, number, image } = data;
 ---
 
 <article class="col wfull">
@@ -21,7 +21,7 @@ const { title, number, description, image } = data;
     border: 1px solid var(--base-100);
     border-bottom: 4px solid var(--accent);
     border-radius: 1em;
-    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.2);
+    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
     overflow: hidden;
 
     @media (max-width: 720px) {

@@ -1,0 +1,15 @@
+<article class="col markdown wfull">
+  <slot />
+</article>
+
+<style is:global>
+  .markdown {
+    gap: 2em;
+
+    & img {
+      width: 100%;
+      border-radius: 1em;
+      box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
+    }
+  }
+</style>

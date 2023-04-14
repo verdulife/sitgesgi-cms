@@ -2,19 +2,33 @@
 import { getCollection } from "astro:content";
 import NewCard from "@components/NewCard.astro";
 
+const url = Astro.request.url;
+const isPreview = !url.includes("noticies");
+const maxPostsPreview = 4;
+
 const posts = (await getCollection("post")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
+const limitedPosts = isPreview ? posts.slice(0, maxPostsPreview) : posts;
 ---
 
 <section class="col acenter wfull">
-  <h2 class="tcenter wfull"><b>Noticies</b></h2>
+  <h2 class="tcenter wfull">
+    <b>{isPreview ? "Últimes notícies" : "Noticies"}</b>
+  </h2>
 
   <main class="wfull">
-    {posts.map((post) => <NewCard post={post} />)}
+    {limitedPosts.map((post) => <NewCard post={post} />)}
   </main>
 
-  <a role="button" href="/noticies">Mes notícies</a>
+  {
+    isPreview && (
+      <a role="button" href="/noticies">
+        Mes notícies
+      </a>
+    )
+  }
 </section>
 
 <style>

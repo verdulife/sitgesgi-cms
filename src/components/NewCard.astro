@@ -12,13 +12,8 @@ const { title, description, pubDate, image } = data;
 
     <main class="col wfull">
       <small><FormattedDate date={pubDate} /></small>
-      <h3>{title}</h3>
-      <p>
-        {description}
-        {description}
-        {description}
-        {description}
-      </p>
+      <h3><b>{title}</b></h3>
+      <p>{description}</p>
     </main>
   </a>
 </article>
@@ -28,16 +23,16 @@ const { title, description, pubDate, image } = data;
     width: calc(100% / 3 - 1em);
     background-color: var(--base);
     border: 1px solid var(--base-100);
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--accent) !important;
     border-radius: 1em;
-    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.2);
+    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
     margin-bottom: 1em;
     overflow: hidden;
 
     @media (max-width: 720px) {
       width: 100%;
       margin-bottom: 0.5em;
-      border-bottom: 2px solid var(--accent);
+      border-width: 2px;
     }
 
     & img {
@@ -47,13 +42,25 @@ const { title, description, pubDate, image } = data;
 
     & main {
       padding: 1em;
+      z-index: 1;
 
       @media (max-width: 720px) {
         padding: 0.5em;
       }
     }
 
+    & small {
+      color: var(--accent);
+    }
+
+    & h3 {
+      font-size: var(--font-sm);
+      margin-top: 0.25em;
+    }
+
     & p {
+      color: var(--base-700);
+      font-size: var(--font-xs);
       margin-top: 1em;
     }
   }
