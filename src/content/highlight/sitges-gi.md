@@ -1,5 +1,5 @@
 ---
 title: Sitges GI
-link: sitges-gi
+link: https://sitgesgi.netlify.app/sitgesgi/
 image: /uploads/sitges.jpg
 ---
