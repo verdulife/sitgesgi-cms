@@ -1,5 +1,5 @@
 ---
 title: Manifest
-link: sitges-gi
+link: https://sitgesgi.netlify.app/manifest/
 image: /uploads/sitges.jpg
 ---
