@@ -15,7 +15,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Títol", name: "title", widget: "string" }
-      - { label: "Descripcio", name: "description", widget: "text" }
+      - { label: "Descripció", name: "description", widget: "text" }
       - { label: "Data de publicació", name: "pubDate", widget: "datetime" }
       - { label: "Imatge de portada", name: "coverImage", widget: "image" }
       - { label: "Contingut", name: "body", widget: "markdown" }
@@ -35,3 +35,12 @@ collections:
     fields:
       - { label: "Títol", name: "title", widget: "string" }
       - { label: "Enllaç", name: "link", widget: "string" }
+
+  - name: "member"
+    label: "Llista"
+    folder: "/src/content/member"
+    create: true
+    fields:
+      - { label: "Nom", name: "title", widget: "string" }
+      - { label: "Número", name: "number", widget: "number" }
+      - { label: "Descripció", name: "description", widget: "text" }

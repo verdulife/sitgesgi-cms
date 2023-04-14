@@ -38,4 +38,16 @@ const highlight = defineCollection({
   }),
 });
 
-export const collections = { blog, cover, highlight };
+const member = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    number: z.number(),
+    description: z.string(),
+    updatedDate: z
+      .string()
+      .optional()
+      .transform((str) => (str ? new Date(str) : undefined)),
+  }),
+});
+
+export const collections = { blog, cover, highlight, member };
