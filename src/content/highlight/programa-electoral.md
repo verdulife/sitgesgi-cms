@@ -1,5 +1,5 @@
 ---
 title: Programa electoral
-link: sitges-gi
+link: https://sitgesgi.netlify.app/programa-electoral/
 image: /uploads/placeholder-hero.jpg
 ---
