@@ -20,5 +20,5 @@ description: >-
 
 
   He estat 8 anys cap de Colla de Carnaval, he estat timbaler del Drac i, des de 2003 fins al 2019, he format part de la Colla Vella de Diables de Sitges.
-image: /uploads/optimized-01.jpg
+image: /uploads/david.jpg
 ---
