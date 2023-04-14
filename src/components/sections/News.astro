@@ -4,7 +4,7 @@ import NewCard from "@components/NewCard.astro";
 
 const url = Astro.request.url;
 const isPreview = !url.includes("noticies");
-const maxPostsPreview = 4;
+const maxPostsPreview = 6;
 
 const posts = (await getCollection("post")).sort(
   (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -18,7 +18,7 @@ const limitedPosts = isPreview ? posts.slice(0, maxPostsPreview) : posts;
     <b>{isPreview ? "Últimes notícies" : "Noticies"}</b>
   </h2>
 
-  <main class="wfull">
+  <main class="row wrap jcenter astretch wfull">
     {limitedPosts.map((post) => <NewCard post={post} />)}
   </main>
 
@@ -43,13 +43,7 @@ const limitedPosts = isPreview ? posts.slice(0, maxPostsPreview) : posts;
   }
 
   main {
-    column-count: 3;
-    column-gap: 1em;
-
-    @media (max-width: 640px) {
-      column-count: 2;
-      column-gap: 0.5em;
-    }
+    gap: 1em;
   }
 
   a {

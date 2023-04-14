@@ -77,7 +77,7 @@ import Menu from "@components/icons/Menu.astro";
     background-color: var(--base);
     border-bottom: 1px solid var(--base-100);
     padding: 0 2em;
-    z-index: 1;
+    z-index: 99;
 
     @media (max-width: 720px) {
       padding: 0 1em;
@@ -93,17 +93,17 @@ import Menu from "@components/icons/Menu.astro";
   }
 
   ul {
+    transition: 150ms;
+
     @media (max-width: 720px) {
       position: absolute;
       top: 100%;
       right: -100%;
       width: 100%;
-      height: 100vh;
+      height: calc(100dvh - 86px);
       flex-direction: column !important;
-      background-color: var(--base);
       opacity: 0;
       pointer-events: none;
-      transition: 150ms;
     }
 
     & label {
@@ -116,6 +116,23 @@ import Menu from "@components/icons/Menu.astro";
     right: 0;
     opacity: 1;
     pointer-events: all;
+    background-color: var(--base);
+    border-bottom: 8px solid var(--accent);
+
+    & li {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    & ul {
+      position: inherit;
+      width: 100%;
+      height: auto;
+      background-color: transparent;
+      opacity: 1;
+      padding-left: 1em;
+    }
   }
 
   li {
@@ -136,6 +153,7 @@ import Menu from "@components/icons/Menu.astro";
       transition: 150ms;
 
       & a {
+        width: 100%;
         padding: 1em;
       }
     }

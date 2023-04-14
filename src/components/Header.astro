@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const covers = await getCollection("cover");
+const covers = (await getCollection("cover")).reverse();
 ---
 
 <header class="wfull">
@@ -21,9 +21,9 @@ const covers = await getCollection("cover");
   </ul>
 </header>
 
-<script>
+<script defer>
   const slider = document.querySelector(".slider");
-  const slideTime = 7000;
+  const slideTime = 5000;
   const maxSlide = 3;
   let countSlide = 0;
 
@@ -51,7 +51,7 @@ const covers = await getCollection("cover");
   }
 
   ul {
-    min-height: 35vw;
+    min-height: 30vw;
 
     @media (max-width: 720px) {
       min-height: 60vw;

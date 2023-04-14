@@ -6,7 +6,7 @@ const { slug, data } = post;
 const { title, description, pubDate, image } = data;
 ---
 
-<article class="col wfull">
+<article class="col">
   <a class="col full" href={`/noticies/${slug}`}>
     <img class="wfull" src={image} alt={title} />
 
@@ -26,11 +26,10 @@ const { title, description, pubDate, image } = data;
     border-bottom: 4px solid var(--accent) !important;
     border-radius: 1em;
     box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
-    margin-bottom: 1em;
     overflow: hidden;
-
+    
     @media (max-width: 720px) {
-      width: 100%;
+      width: calc(100% / 2 - 1em);
       margin-bottom: 0.5em;
       border-width: 2px;
     }
