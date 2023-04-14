@@ -1,4 +1,4 @@
 ---
-title: Portada 1
+title: Amb tu
 image: /uploads/equip-foto.png
 ---
