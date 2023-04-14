@@ -44,3 +44,4 @@ collections:
       - { label: "Nom", name: "title", widget: "string" }
       - { label: "Número", name: "number", widget: "number" }
       - { label: "Descripció", name: "description", widget: "text" }
+      - { label: "Imatge", name: "image", widget: "image" }

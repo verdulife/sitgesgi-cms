@@ -43,6 +43,7 @@ const member = defineCollection({
     title: z.string(),
     number: z.number(),
     description: z.string(),
+    image: z.string(),
     updatedDate: z
       .string()
       .optional()
