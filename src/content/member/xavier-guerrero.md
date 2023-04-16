@@ -16,5 +16,5 @@ description: >-
 
 
   Hi ha molts punts a millorar, però treballant conjuntament serem capaços de realitzar grans coses per Sitges i aconseguir d'aquesta manera l'objectiu principal: fer de Sitges un punt de referència i un lloc millor per a tots.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/xavi-guerrero.jpg
 ---
