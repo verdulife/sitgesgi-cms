@@ -16,5 +16,5 @@ description: >-
 
 
   Jo, em sento completament representada per Sitges GI, perquè comparteixo la seva prioritat, que no és altre que fer grans coses per Sitges i que el nostre poble sigui cada dia un lloc millor on viure i on veure créixer els nostres petits.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/merce.jpg
 ---
