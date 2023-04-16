@@ -24,5 +24,5 @@ description: >-
 
 
   Amb esforç i treball conjunt, prioritzant a les vilatanes i vilatans, és la millor manera per aconseguir el Sitges que volem.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/marc-benazet.jpg
 ---
