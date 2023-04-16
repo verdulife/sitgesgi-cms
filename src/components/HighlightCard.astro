@@ -2,10 +2,14 @@
 const { highlight } = Astro.props;
 const { data } = highlight;
 const { title, link } = data;
+const linkUrl = new URL(link);
+const currentUrl = new URL(Astro.request.url);
+
+currentUrl.pathname = linkUrl.pathname;
 ---
 
 <article class="col acenter">
-  <a class="row acenter full" href={link}>
+  <a class="row acenter full" href={currentUrl}>
     <span class="row"></span>
     <h3>{title}</h3>
   </a>

@@ -1,22 +1,13 @@
 ---
 import Main from "@src/layouts/Main.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <Main>
-  <section class="col wfull">
-    <h1>Programa electoral</h1>
-    <a
-      href="https://sitgesgi.cat/wp-content/uploads/2019/05/Programa-Sitges-GI-CATAL%C3%80.pdf"
-      >Catala</a
-    >
-    <a
-      href="https://sitgesgi.cat/wp-content/uploads/2019/05/Programa-Sitges-GI-CATAL%C3%80.pdf"
-      >Castella</a
-    >
-    <a
-      href="https://sitgesgi.cat/wp-content/uploads/2019/05/Programa-Sitges-GI-CATAL%C3%80.pdf"
-      >Angles</a
-    >
+  <section class="col fcenter full">
+    <h1>Programa electoral {currentYear}</h1>
+    <p>Pròximament</p>
   </section>
 </Main>
 
@@ -29,5 +20,10 @@ import Main from "@src/layouts/Main.astro";
     @media (max-width: 720px) {
       padding: 2em 1em;
     }
+  }
+
+  h1,
+  p {
+    text-align: center;
   }
 </style>

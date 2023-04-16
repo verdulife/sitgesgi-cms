@@ -4,28 +4,29 @@ const { data, slug } = member;
 const { title, number, image } = data;
 ---
 
-<article class="col wfull">
+<article class="col">
   <a class="col full" href={`/llista/${slug}`}>
     <img class="wfull" src={image} alt={title} />
 
     <main class="col acenter wfull">
       <p class="row fcenter"><strong>{number}</strong></p>
-      <h3>{title}</h3>
+      <h3 class="tcenter">{title}</h3>
     </main>
   </a>
 </article>
 
 <style>
   article {
+    width: calc(100% / 3 - 1em);
     background-color: var(--base);
     border: 1px solid var(--base-100);
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--accent) !important;
     border-radius: 0.25em;
     box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
     overflow: hidden;
 
     @media (max-width: 720px) {
-      width: 100%;
+      width: calc(100% / 2 - 1em);
       margin-bottom: 0.5em;
       border-bottom: 2px solid var(--accent);
     }
@@ -33,7 +34,6 @@ const { title, number, image } = data;
     & img {
       aspect-ratio: 9/10;
       object-fit: cover;
-      object-position: top;
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
 

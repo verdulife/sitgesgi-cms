@@ -10,6 +10,8 @@ import Main from "@src/layouts/Main.astro";
       <small>Sitges Grup Independent</small>
     </h1>
 
+    <img src="/sitgesgi-bg.jpg" alt="Sitges" />
+
     <p>
       Som un grup de persones que estimem Sitges i que hem fet possible un nou
       projecte polític per al nostre poble. Un projecte engrescador, que pretén
@@ -41,5 +43,12 @@ import Main from "@src/layouts/Main.astro";
   h1 {
     border-left: 6px solid var(--accent) !important;
     padding: 2rem;
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 0.25em;
+    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
   }
 </style>

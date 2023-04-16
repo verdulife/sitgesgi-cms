@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import Main from "@src/layouts/Main.astro";
 import MemberCard from "@components/MemberCard.astro";
 
+const currentYear = new Date().getFullYear();
 const members = (await getCollection("member")).sort(
   (a, b) => a.data.number - b.data.number
 );
@@ -11,17 +12,11 @@ const members = (await getCollection("member")).sort(
 
 <Main>
   <section class="col wfull">
-    <h1 class="tcenter wfull">Llista</h1>
+    <h1 class="tcenter wfull">Candidatura {currentYear}</h1>
 
-    <ul class="row jcenter wrap wfull">
-      {
-        members.map((member) => (
-          <li>
-            <MemberCard member={member} />
-          </li>
-        ))
-      }
-    </ul>
+    <div class="row jcenter astretch wrap wfull">
+      {members.map((member) => <MemberCard member={member} />)}
+    </div>
   </section>
 
   <style>
@@ -35,12 +30,8 @@ const members = (await getCollection("member")).sort(
       }
     }
 
-    ul {
+    div {
       gap: 1em;
-    }
-
-    li {
-      width: calc(100% / 3 - 1em);
     }
   </style>
 </Main>
