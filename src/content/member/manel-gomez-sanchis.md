@@ -14,5 +14,5 @@ description: >-
 
 
   Què millor que un equip de persones de Sitges, diverses, amb diferents experiències i sense cap altre objectiu que treballar en la millora del municipi?
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/manel.jpg
 ---
