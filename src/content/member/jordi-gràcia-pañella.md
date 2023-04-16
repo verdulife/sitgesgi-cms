@@ -15,5 +15,5 @@ description: >-
 
 
   Sitges GI, amb el seu lema, Som Sitges, representa exactament el que som: un partit involucrat només en Sitges, siguis qui siguis i vinguis d'on vinguis.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/jordi.jpg
 ---
