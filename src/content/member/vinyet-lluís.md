@@ -16,5 +16,5 @@ description: >-
 
 
   Em considero una persona propera i així és com som a Sitges GI: propers. Ens interessem per les persones i, per això, volem millorar el nostre poble, escoltant a la seva gent.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/vinyet.jpg
 ---
