@@ -24,5 +24,5 @@ description: >-
 
 
   Amb esforç i treball conjunt, prioritzant a les vilatanes i vilatans, és la millor manera per aconseguir el Sitges que volem.
-image: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fes%2Fvector%2Fvector-de-icono-de-perfil-de-avatar-predeterminado-gm1337144146-418137046&psig=AOvVaw1JJdgYA7JTxk0_SQ2kze-p&ust=1681746709184000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjKqevgrv4CFQAAAAAdAAAAABAE
+image: /uploads/istockphoto-1337144146-170667a.jpg
 ---
