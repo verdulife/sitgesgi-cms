@@ -17,5 +17,5 @@ description: >-
 
 
   La nostra missió és cuidar dels sitgetans i sitgetanes, per tal que les arrels que han anat construint, continuïn marcant la nostra identitat, com, i sense cap pretensió, un dels pobles més macos de Catalunya.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/cora.jpg
 ---
