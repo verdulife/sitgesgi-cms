@@ -15,5 +15,5 @@ description: >-
 
 
   No estic gaire vinculada amb la política, però advoco per un bon futur per al poble, i crec que Sitges GI pot aportar tot allò que els ciutadans i ciutadanes de Sitges necessitem.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/ines.jpg
 ---
