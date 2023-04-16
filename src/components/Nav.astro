@@ -1,5 +1,7 @@
 ---
 import Menu from "@components/icons/Menu.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <nav class="row jcenter wfull">
@@ -34,7 +36,7 @@ import Menu from "@components/icons/Menu.astro";
           </ul>
         </li>
         <li tabindex="0">
-          <label>Eleccions 2023</label>
+          <label>Eleccions {currentYear}</label>
           <ul>
             <li>
               <a href="/llista">Llista</a>

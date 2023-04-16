@@ -16,7 +16,7 @@ const { title, link } = data;
     width: calc(100% / 3 - 1em);
     background-color: var(--base);
     border: 1px solid var(--base-100);
-    border-radius: 1em;
+    border-radius: 0.25em;
     box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
     overflow: hidden;
 
@@ -28,9 +28,9 @@ const { title, link } = data;
       width: 80px;
       min-width: 80px;
       aspect-ratio: 1;
-      background-color: var(--accent);
+      background-color: var(--accent-100);
       clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
-      
+
       @media (max-width: 720px) {
         width: 50px;
         min-width: 60px;

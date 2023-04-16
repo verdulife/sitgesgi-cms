@@ -44,7 +44,7 @@
   text-align: center;
   text-decoration: none;
   border: var(--border);
-  border-radius: 0.75em;
+  border-radius: 0.25em;
   box-shadow: 0 2px 5px hsl(var(--base-500-hsl), 0.6);
   user-select: none;
   -webkit-user-drag: none;

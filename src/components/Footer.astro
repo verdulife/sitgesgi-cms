@@ -1,33 +1,92 @@
 ---
-const today = new Date();
+import Facebook from "./icons/Facebook.astro";
+import Instagram from "./icons/Instagram.astro";
+import Telegram from "./icons/Telegram.astro";
+import Twitter from "./icons/Twitter.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="col acenter wfull">
-  <img src="/logo-white.svg" alt="Sitges Grup Independent" />
-  <p>
-    Direcció: Carrer Sant Bonaventura 20, 08870 Sitges Correu electrónic: <a
-      href="mailto:info@sitgesgi.cat">info@sitgesgi.cat</a
-    >
-  </p>
+  <main class="col wfull">
+    <div class="row acenter wrap wfull">
+      <aside class="col grow">
+        <img src="/logo-blue.svg" alt="Sitges Grup Independent" />
+        <p>
+          <a href="mailto:info@sitgesgi.cat" rel="noreferrer">
+            info@sitgesgi.cat
+          </a>
+        </p>
+        <p>Carrer Sant Bonaventura 20, 08870 Sitges</p>
+      </aside>
 
-  <p>
-    <a href="https://www.facebook.com/SITGESgi" target="_blank">Facebook</a>
-    <a href="https://twitter.com/sitgesgi" target="_blank">Twitter</a>
-    <a href="https://www.instagram.com/sitges_gi/" target="_blank">Instagram</a>
-    <a href="https://t.me/sitgesgi" target="_blank">Telegram</a>
-  </p>
+      <nav class="col aend astart@md grow">
+        <p>Segueix-nos a les xarxes</p>
 
-  <p>
-		<a href="/politica-de-privacitat">Politica de privacitat</a>
-		<a href="/politica-de-cookies">Politica de cookies</a>
-	</p>
+        <aside class="row">
+          <a href="https://www.facebook.com/SITGESgi" target="_blank"
+            ><Facebook /></a
+          >
+          <a href="https://twitter.com/sitgesgi" target="_blank"><Twitter /></a>
+          <a href="https://www.instagram.com/sitges_gi/" target="_blank">
+            <Instagram />
+          </a>
+          <a href="https://t.me/sitgesgi" target="_blank"><Telegram /></a>
+        </aside>
+      </nav>
+    </div>
 
-  <small>© 2023 SITGES GI</small>
+    <span class="xdiv"></span>
+
+    <p class="tcenter wfull">
+      <small>
+        <a href="/politica-de-privacitat" rel="noreferrer"
+          >Politica de privacitat</a
+        >
+        |
+        <a href="/politica-de-cookies" rel="noreferrer">Politica de cookies</a>
+        | Sitges GI © {currentYear}
+      </small>
+    </p>
+  </main>
 </footer>
 
 <style>
   footer {
-    background-color: var(--accent);
+    background-color: var(--accent-100);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
     padding: 4em;
+    padding-bottom: 1em;
+  }
+
+  main {
+    max-width: var(--media-xl);
+
+    & div {
+      gap: 1em;
+    }
+  }
+
+  aside {
+    & img {
+      margin-bottom: 1em;
+    }
+  }
+
+  nav {
+    gap: 0.5em;
+
+    & aside {
+      gap: 1em;
+    }
+  }
+
+  span {
+    background-color: var(--accent-200);
+    margin: 2em 0 0.75em 0;
+  }
+
+  small {
+    opacity: 0.7;
   }
 </style>
