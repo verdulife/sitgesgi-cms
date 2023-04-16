@@ -20,5 +20,5 @@ description: >
 
 
   Ens cal un plantejament de futur. Sitges creix desmesuradament i s'ha d'adaptar als canvis que viu, però sense oblidar la nostra essència.
-image: /uploads/istockphoto-1337144146-170667a.jpg
+image: /uploads/nadia.jpg
 ---
