@@ -5,9 +5,9 @@ description: L’administració local es reunirà mensualment amb el sector
   comercial per atendre les seves inquietuds i fer el seguiment del pla
   d’actuació de la venda ambulant presentant avui a la taula de treball.
 pubDate: 2023-04-14T15:59:28.178Z
-image: https://sitgesgi.cat/wp-content/uploads/2021/03/foto-reunio-ajsitges-370x208.jpeg
+image: /uploads/foto-reunio-ajsitges-370x208.jpg
 ---
-[![Es presenta el pla d’actuació 2021 a la taula de treball de venda ambulant no autoritzada](https://sitgesgi.cat/wp-content/uploads/2021/03/foto-reunio-ajsitges.jpeg)](https://sitgesgi.cat/wp-content/uploads/2021/03/foto-reunio-ajsitges.jpeg)
+[![Es presenta el pla d’actuació 2021 a la taula de treball de venda ambulant no autoritzada](/uploads/foto-reunio-ajsitges.jpg)](/uploads/foto-reunio-ajsitges.jpg)
 
 L’administració local es reunirà mensualment amb el sector comercial per atendre les seves inquietuds i fer el seguiment del pla d’actuació de la venda ambulant presentant avui a la taula de treball. El Govern aposta per un Pla d’Actuació que aborda el fenomen de forma integral i transversal, amb la participació de diferents regidories i àrees de l’Ajuntament, i amb la col·laboració del sector comercial.
 

@@ -18,23 +18,20 @@ const { title, number, image } = data;
 <style>
   article {
     width: calc(100% / 3 - 1em);
-    background-color: var(--base);
-    border: 1px solid var(--base-100);
-    border-bottom: 4px solid var(--accent) !important;
-    border-radius: 0.25em;
-    box-shadow: 0 5px 20px hsl(var(--base-500-hsl), 0.4);
+    padding: 1em;
     overflow: hidden;
-
+    
     @media (max-width: 720px) {
       width: calc(100% / 2 - 1em);
       margin-bottom: 0.5em;
       border-bottom: 2px solid var(--accent);
     }
-
+    
     & img {
-      aspect-ratio: 3/4.5;
+      aspect-ratio: 1;
       object-fit: cover;
-      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      border-radius: 50%;
+      box-shadow: 0 5px 10px hsl(var(--base-500-hsl), 0.4);
     }
 
     & main {
