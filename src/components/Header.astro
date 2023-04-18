@@ -28,12 +28,12 @@ const covers = (await getCollection("cover")).reverse();
   let countSlide = 0;
 
   function slideOne() {
-    slider?.scrollBy({ left: 100 });
+    slider?.scrollBy({ left: slider.clientWidth, behavior: "smooth" });
     countSlide++;
   }
 
   function resetSlide() {
-    slider?.scrollTo({ left: 0 });
+    slider?.scrollTo({ left: 0, behavior: "smooth" });
     countSlide = 0;
   }
 
@@ -54,7 +54,7 @@ const covers = (await getCollection("cover")).reverse();
     min-height: 30vw;
 
     @media (max-width: 720px) {
-      min-height: 60vw;
+      min-height: 50vw;
     }
   }
 

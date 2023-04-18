@@ -95,6 +95,7 @@ const currentYear = new Date().getFullYear();
   }
 
   ul {
+    overflow-y: auto;
     transition: 150ms;
 
     @media (max-width: 720px) {
@@ -102,7 +103,7 @@ const currentYear = new Date().getFullYear();
       top: 100%;
       right: -100%;
       width: 100%;
-      height: calc(100dvh - 86px);
+      height: calc(100vh - 86px);
       flex-direction: column !important;
       opacity: 0;
       pointer-events: none;
@@ -111,6 +112,10 @@ const currentYear = new Date().getFullYear();
     & label {
       cursor: pointer;
       padding: 2em 1em;
+
+      @media (max-width: 720px) {
+        padding: 1em;
+      }
     }
   }
 
@@ -143,6 +148,10 @@ const currentYear = new Date().getFullYear();
 
     & a {
       padding: 2em 1em;
+
+      @media (max-width: 720px) {
+        padding: 1em;
+      }
     }
 
     & ul {

@@ -34,15 +34,20 @@ import Main from "@src/layouts/Main.astro";
     max-width: var(--media-lg);
     gap: 4em;
     padding: 4em 1em;
-
+    
     @media (max-width: 720px) {
-      padding: 2em 1em;
+      gap: 2em;
+      padding: 2em;
     }
   }
 
   h1 {
     border-left: 6px solid var(--accent) !important;
     padding: 2rem;
+
+    @media (max-width: 720px) {
+      padding: 1rem;
+    }
   }
 
   img {
