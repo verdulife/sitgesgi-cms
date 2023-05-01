@@ -1,7 +1,7 @@
 ---
 title: Kenna Duffy
 number: 31
-description: >
+description: >-
   El meu nom és Kenna Anna Duffy Gassol i vaig néixer el 20 de desembre de 1999
   a Sitges, Espanya. Tinc la sort d'haver crescut en aquest bell poble
   mediterrani amb la meva mare, que també és de Sitges, i el meu pare, que és
