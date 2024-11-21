@@ -7,10 +7,11 @@
 	scroll-behavior: smooth;
 	-webkit-overflow-scrolling: touch;
 }
+
 .scrollbar.snap {
 	scroll-snap-type: y mandatory;
 
-	& > * {
+	&>* {
 		scroll-snap-align: start;
 		scroll-snap-stop: always;
 	}
@@ -32,15 +33,18 @@
 		display: none;
 	}
 }
-.scrollbar[horizontal] > * {
+
+.scrollbar[horizontal]>* {
 	display: inline-flex;
 	white-space: normal;
-	vertical-align:text-top;
+	vertical-align: text-top;
 }
+
 .scrollbar[horizontal].snap {
 	scroll-snap-type: x mandatory;
 }
-.scrollbar[horizontal].snap > * {
+
+.scrollbar[horizontal].snap>* {
 	scroll-snap-align: start;
 	scroll-snap-stop: always;
 }
@@ -56,10 +60,11 @@
 			scroll-behavior: smooth;
 			-webkit-overflow-scrolling: touch;
 		}
+
 		.scrollbar\@$(media).snap {
 			scroll-snap-type: y mandatory;
 
-			& > * {
+			&>* {
 				scroll-snap-align: start;
 				scroll-snap-stop: always;
 			}
@@ -81,14 +86,17 @@
 				display: none;
 			}
 		}
-		.scrollbar[horizontal\@$(media)] > * {
+
+		.scrollbar[horizontal\@$(media)]>* {
 			display: inline-flex;
 			white-space: normal;
 		}
+
 		.scrollbar[horizontal\@$(media)].snap {
 			scroll-snap-type: x mandatory;
 		}
-		.scrollbar[horizontal\@$(media)].snap > * {
+
+		.scrollbar[horizontal\@$(media)].snap>* {
 			scroll-snap-align: start;
 			scroll-snap-stop: always;
 		}
